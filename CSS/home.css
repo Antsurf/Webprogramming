@@ -1,0 +1,17 @@
+:root{
+    --light-blue: #ecf8f8;
+    --pink-beige: #eee4e1;
+    --light-brown: #e7d8c9;
+    --pink-red: #e6beae;
+    --brown: #b2967d;
+}
+
+table, td{
+    border:2px solid black;
+}
+
+.horse-test {
+    height: 1px;
+    background-color: black;
+    margin: 10px;
+}
