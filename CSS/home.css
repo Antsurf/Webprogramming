@@ -8,14 +8,6 @@
 
 /* MULTIPLICATION AND DIVISION TABLES STYLE */
 
-#tables-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5%; /* Space between columns and rows */
-    justify-content: space-evenly; /* Optional: center align tables */
-    padding: 2px;
-
-}
 
 #tables-container {
     display: flex;
