@@ -1,0 +1,167 @@
+:root{
+    --light-blue: #ecf8f8;
+    --pink-beige: #eee4e1;
+    --light-brown: #e7d8c9;
+    --pink-red: #e6beae;
+    --brown: #fa7907;
+}
+
+html{
+    min-height:100%;
+    margin:0;
+    padding:0;
+    background-color: red; /* in case if problem */
+}
+
+
+
+
+/* BODY FOR ALL PAGES */
+body{
+
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Bahnschrift, serif;
+    background-color: var(--light-brown);
+
+}
+
+/* LINKS */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER FOR ALL PAGES */
+header{
+
+    display: flex;
+    justify-content: space-between; /* Push items to far left and right */
+    align-items: flex-start; /* Align them to the top */
+    background-color: var(--light-blue);
+    border-bottom: 2px solid black;
+    font-family: Bahnschrift, serif;
+
+}
+
+header nav{
+    margin-top:20px;
+
+}
+
+header nav a:nth-child(1){
+
+    margin:20px;
+    border: 2px solid black;
+    padding:10px;
+    border-radius: 20%;
+    background-color: black;
+}
+
+header nav a:nth-child(2){
+    margin:20px;
+    border: 2px solid black;
+    padding:10px;
+    border-radius: 10%;
+    background-color: black;
+}
+
+header nav a:nth-child(3){
+    margin:20px;
+    border: 2px solid black;
+    padding:10px;
+    border-radius: 10%;
+    background-color: black;
+}
+
+header img{
+    padding-top:10px;
+    padding-right:10px;
+    width:12%;
+}
+
+header h2{
+    padding-left:10px;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* MULTIPLICATION TABLES STYLE */
+
+
+#tables{ /* FOR TITLE */
+    background-color: var(--pink-red);
+    padding-top:5px;
+    text-align:center;
+
+}
+#tables-container { /* ALL MULTIPLICATION TABLES */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%; /* Space between columns and rows */
+    justify-content: center; /* Optional: center align tables */
+    padding: 2px;
+    max-width: 1000px;
+    margin:auto;
+
+
+
+}
+
+/* WHEN NOT HIDDEN */
+.tables-content {
+
+    border: 2px solid black;
+    border-collapse: collapse;
+    min-width:120px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--light-blue);
+
+
+
+}
+
+.tables-content caption{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; /* space between caption and table*/
+    background-color: var(--light-blue);
+
+
+
+}
+
+
+.tables-content td {
+    padding: 4px 8px; /* 4 (top and bottom) 8 (left and right) */
+}
+
+/* WHEN HIDDEN */
+.tables-content.hidden-table { /* select element with boss classes*/
+    border: none;
+    background-color: var(--pink-red);
+
+}
+
+.tables-content.hidden-table tr {
+    display: none;
+
+}
+
+.tables-content.hidden-table caption {
+
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; /* space between caption and table*/
+    background-color: var(--light-blue);
+    border: 1px solid black;
+    border-radius: 10%;
+}
