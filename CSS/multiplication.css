@@ -28,7 +28,7 @@ body{
 }
 
 /* LINKS */
-a{
+header a{
     text-decoration: none;
     color: white;
 }
@@ -37,16 +37,19 @@ a{
 header{
 
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-between; /* Push items to far left and right */
     align-items: flex-start; /* Align them to the top */
     background-color: var(--light-blue);
     border-bottom: 2px solid black;
     font-family: Bahnschrift, serif;
+    margin-bottom: 10px;
 
 }
 
 header nav{
-    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
 
 }
 
@@ -76,21 +79,37 @@ header nav a:nth-child(3){
 }
 
 header img{
+    display:flex;
+    flex-wrap:wrap;
     padding-top:10px;
     padding-right:10px;
-    width:12%;
+    padding-bottom:10px;
+    width:150px;
 }
 
 header h2{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:30px;
     padding-left:10px;
 
 }
 
 footer{
     display: flex;
+    flex-wrap:wrap;
     flex-direction: column;
     justify-content: space-between;
+    border-top:2px solid black;
+    background-color: var(--light-blue);
+    text-align: center;
+    line-height:10px;
+    padding-bottom:10px;
+}
 
+footer a{
+    text-decoration:none;
+    color:black;
 }
 
 /* MULTIPLICATION TABLES STYLE */
@@ -115,6 +134,39 @@ footer{
 
 }
 
+/* Title */
+
+#title {
+    position: relative;
+    text-align: center;
+    padding: 4rem;
+    z-index: 0;
+    overflow: hidden;
+    margin-bottom:2rem;
+    font-size:20px;
+}
+
+#title::before { /*to add background (c'était trop relou autrement) */
+    content: "";
+    position: absolute;
+
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPmItc1mINwuFycYe93aI6Akb95_ONQFkN0Q&s");
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 4px;
+    width:600px;
+    margin:auto;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+#main-explanation{
+    padding-left:10px;
+    line-height:6px;
+}
+
 /* WHEN NOT HIDDEN */
 .tables-content {
 
@@ -125,9 +177,8 @@ footer{
     margin-bottom: 20px;
     background-color: var(--light-blue);
 
-
-
 }
+
 
 .tables-content caption{
     display: block;
@@ -149,10 +200,14 @@ footer{
     border: none;
     background-color: var(--pink-red);
 
+
 }
 
 .tables-content.hidden-table tr {
     display: none;
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0.95);
 
 }
 
