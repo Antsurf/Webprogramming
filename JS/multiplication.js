@@ -14,6 +14,8 @@ for (let i = 1; i <= 12; i++) {
     caption.style.cursor = 'pointer'; // change cursor into a hand
     caption.addEventListener('click', function() {
         table.classList.toggle('hidden-table');
+        if (!table.classList.contains('hidden-table'))
+        table.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
     table.appendChild(caption);
 
@@ -23,7 +25,19 @@ for (let i = 1; i <= 12; i++) {
         cell.textContent = `${i} × ${j} = ${i * j}`;
         row.appendChild(cell);
         table.appendChild(row);
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', function()
+        {
+            table.classList.toggle('hidden-table')
+            if (!table.classList.contains('hidden-table'))
+            table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+
     }
 
+
     container.appendChild(table);
+    table.scrollTop = table.scrollHeight;
+
 }
