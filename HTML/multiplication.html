@@ -53,7 +53,35 @@
 <div id="opponent" class="horse-test">
 
 </div>
-<div id="user" class="horse-test"></div>
+
+<input value="test" id="showTest" type="submit">
+<div id="horse-test">
+    <div id="horses">
+        <div id="horse1"></div>
+        <div id="horse2"></div>
+    </div>
+
+    <p id="numHorse1">horse 1: 0</p>
+    <p id="numHorse2">horse 2: 0</p>
+    <div id="setUp">
+        <label for="level">level : </label>
+        <select id="level">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <input type="submit" value="Start" id="StartButton">
+    </div>
+
+    <div id="Q&A">
+        <label id="computation">1 &#215 1</label>
+        <label for="answer"></label><input type="number" id="answer">
+        <input type="submit" id="submitButton">
+    </div>
+
+    <input type="submit" id="StartAgain" value="Again" onclick="again()">
+
+</div>
 
 <!-- More difficult computes -->
 
