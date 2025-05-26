@@ -112,38 +112,23 @@ footer a{
     color:black;
 }
 
-/* MULTIPLICATION TABLES STYLE */
 
-
-#tables{ /* FOR TITLE */
-    background-color: var(--pink-red);
-    padding-top:5px;
+/*For all h1 titles*/
+h1{
     text-align:center;
+    font-size:32px;
 
 }
-#tables-container { /* ALL MULTIPLICATION TABLES */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5%; /* Space between columns and rows */
-    justify-content: center; /* Optional: center align tables */
-    padding: 2px;
-    max-width: 1000px;
-    margin:auto;
-
-
-
-}
-
-/* Title */
+/* Title table of multiplication*/
 
 #title {
     position: relative;
-    text-align: center;
+
     padding: 4rem;
     z-index: 0;
     overflow: hidden;
     margin-bottom:2rem;
-    font-size:20px;
+
 }
 
 #title::before { /*to add background (c'était trop relou autrement) */
@@ -165,6 +150,47 @@ footer a{
 #main-explanation{
     padding-left:10px;
     line-height:6px;
+}
+
+
+#youtube-video{
+    margin:0 auto 10px auto;
+    padding:0;
+    border:4px double black;
+    border-radius:5px;
+    width:fit-content;
+
+}
+#youtube-video h1{
+    padding:0;
+    margin:0;
+}
+
+iframe{
+    display:block;
+    margin:auto; /*margin only works for block elements only, that's why display block*/
+    width:500px;
+    padding:0;
+
+}
+
+/* MULTIPLICATION TABLES STYLE */
+
+
+#tables{ /* FOR TITLE */
+    background-color: var(--pink-red);
+    padding-top:5px;
+
+}
+#tables-container { /* ALL MULTIPLICATION TABLES */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%; /* Space between columns and rows */
+    justify-content: center; /* Optional: center align tables */
+    padding: 2px;
+    max-width: 1000px;
+    margin:auto;
+
 }
 
 /* WHEN NOT HIDDEN */
