@@ -1,0 +1,94 @@
+html{
+    height: 100%;
+}
+header{
+    margin-bottom: 0;
+}
+body{
+    margin: 0;
+}
+#sub-body{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.creators{
+    width: 50%;
+    border-radius: 5px;
+    margin: 10px;
+    max-width: 200px;
+}
+
+#text{
+    width: 50%;
+    padding: 30px;
+    margin: auto
+}
+
+h1{
+    text-align: center;
+}
+
+#about{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #003399;
+    color: white;
+    padding: 10px;
+}
+
+.studentContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto;
+
+}
+
+.logo{
+    height: 1em;
+    border-radius: 50%;
+}
+
+.textStudent{
+    margin: auto;
+}
+
+.textStudent a{
+    color: #8399c8;
+    margin: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .studentContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        border: solid black 1px;
+        padding: 2px;
+        border-radius: 5px;
+        width: 75%;
+        align-items: center;
+    }
+
+    .creators{
+        width: 75%;
+        border-radius: 5px;
+
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #sub-body{
+        display: flex;
+        flex-direction: column;
+    }
+    #about{
+        width: 100%;
+    }
+    #text{
+        width: 100%;
+    }
+}
