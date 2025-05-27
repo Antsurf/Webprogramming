@@ -15,7 +15,7 @@
 
     <h2>EFREI Calculation</h2>
     <nav>
-        <a href="">Home</a>
+        <a href="../HTML/home.html">Home</a>
         <a href="">Euclidian Division</a>
         <a href="">First degree equations</a>
     </nav>
@@ -33,15 +33,36 @@
 </section>
 
 <section id="main-explanation">
-    <p>In this page you will learn how to multiply different numbers</p>
-    <p>Multiplying 2 numbers is like repeating the action of adding them: </p>
-    <p class="mathEquation">3 &#215 5 = 5 + 5 + 5</p>
-    <p>For digits, it is waaaaaay easier to learn by heart your tables :</p>
+    <h2 class="subtitle">Multiplication</h2>
+    <p> In math, multiplication is the method of finding the product of two or more numbers. It is a primary
+        arithmetic operation that is used quite often in real life. Multiplication is used when we need to <span class="highlight">combine
+        groups of equal sizes</span>. Let us learn more about multiplication in this page.
+    </p>
+    <h3 class="subtitle">What is Multiplication?</h3>
+    <p> Multiplication is an operation that represents the basic idea of <span class="highlight">repeated addition of the same number</span>. The
+        numbers that are multiplied are called <span class="highlight">the factors</span> and the result that is obtained after the multiplication
+        of two or more numbers is known as <span class="highlight">the product</span> of those numbers. Multiplication is used to simplify the task
+        of repeated addition of the same number.
+    </p>
+    <h4 class="subtitle">Example:</h4>
+    <p>If there are 6 boxes of cupcakes and each box has 9 cupcakes, find the total number of cupcakes.
+    </p>
+    <h4 class="subtitle">Solution:</h4>
+    <p> We can solve this question by addition but it would take longer to add these to get the answer. That is, 9 +
+        9 + 9 + 9 + 9 + 9 = 54 cupcakes. In other words, when we have larger numbers to work upon, then
+        multiplication is useful.
+        Now, let us use multiplication to solve this problem. We will multiply the number of boxes with the number
+        of cupcakes in each box. If we multiply 6 × 9, we will get the total number of cupcakes, which is 6 × 9 = 54
+        cupcakes. Thus, we can see that we get the same result in a shorter period of time. This is the reason why
+        multiplication is also termed as repeated addition.</p>
 </section>
 
 <section id="youtube-video">
     <h1>A little video to explain it to you !</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/hJiiLDPsuzo?si=sj4NoPhrhfvk3blJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hJiiLDPsuzo?si=sj4NoPhrhfvk3blJ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </section>
 <!-- Tables -->
@@ -55,48 +76,49 @@
 
 <!-- Intermediate quiz -->
 
-<div id="opponent" class="horse-test">
+<section id="horse-game">
 
-</div>
+    <h2 id="game-title">Click on the logo to see the test !</h2>
 
-<div id="horse-test">
-    <img src="../IMG/horseLogo.png" id="horseLogo" alt="logo horse">
-    <h1>Horse game</h1>
+    <img src="../IMG/horseLogo.png" id="horseLogo" onclick="showGame()" alt="horse medal">
 
-    <div id="setUp">
-        <label for="level">Select your level : </label>
-        <select id="level">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
-        <input type="submit" value="Start" id="StartButton">
-    </div>
+    <div id="horse-test">
+        <h1>Welcome to the horse game !</h1>
 
-    <div id="horses">
-        <div class="track">
-            <img src="../IMG/runningHorse.png" class="runningHorse" id="horse1" alt="image of a horse">
-            <div class="finishLine"></div>
+        <div id="setUp">
+            <label for="level">Select your level : </label>
+            <select id="level">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <input type="submit" value="Start" id="StartButton">
         </div>
-        <div class="track">
-            <img src="../IMG/runningHorse.png" class="runningHorse" id="horse2" alt="image of a horse">
-            <div class="finishLine"></div>
+
+        <div id="horses">
+            <div class="track">
+                <img src="../IMG/runningHorse.png" class="runningHorse" id="horse1">
+                <div class="finishLine"></div>
+            </div>
+            <div class="track">
+                <img src="../IMG/runningHorse.png" class="runningHorse" id="horse2">
+                <div class="finishLine"></div>
+            </div>
         </div>
+
+
+        <div id="Q&A">
+            <label id="computation">1 &#215 1</label>
+            <label for="answer"></label><input type="number" id="answer">
+            <input type="submit" id="submitButton">
+        </div>
+
+        <p id="textTimer">3</p>
+
+        <input type="submit" id="StartAgain" value="Again" onclick="again()">
+
     </div>
-
-
-    <div id="Q&A">
-        <label id="computation">1 &#215 1</label>
-        <label for="answer"></label><input type="number" id="answer">
-        <input type="submit" id="submitButton">
-    </div>
-
-    <p id="textTimer">3</p>
-
-    <input type="submit" id="StartAgain" value="Again" onclick="again()">
-
-</div>
-
+</section>
 <!-- More difficult computes -->
 
 <!-- Last quiz multiplication -->
@@ -117,4 +139,5 @@
     <a href="about.html">About us</a>
 </footer>
 </body>
+
 </html>

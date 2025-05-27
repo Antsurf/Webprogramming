@@ -40,6 +40,29 @@ for (let i = 1; i <= 12; i++) {
 
 //Horse part :
 
+function showTitle(){
+    var game =document.getElementById("horse-test");
+    var title = document.getElementById("game-title");
+    if (game.style.display=="block"){
+        title.style.display ="none";
+    }
+    else{
+        title.style.display="block"
+    }
+}
+function showGame() {
+
+    var x = document.getElementById("horse-test");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        showTitle()
+    } else {
+        x.style.display = "none";
+        showTitle()
+    }
+}
+
 let horse1 = 0;
 let horse2 = 0;
 let number1 = Math.floor(Math.random() * 11);
@@ -149,8 +172,8 @@ answer.addEventListener("keypress", function(event){
 function updateHorse2(){
     if(running === true){
         if (answer.value == result){
-            horse2+= 10;
-            const targetPosition = Math.min(horse2*0.9, 90);
+            horse2+= 8;
+            const targetPosition = Math.min(horse2*0.9, 95);
             animateHorse(horseImg2, targetPosition, function() { // call bakc function
                 if (horse2 >= 100){
                     clearInterval(updateHorse1);
