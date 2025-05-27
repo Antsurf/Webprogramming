@@ -60,6 +60,30 @@ let textTimer = document.getElementById("textTimer");
 let level = 0;
 
 let updateHorse1;
+function animateHorse(horse, targetPosition, callback) {
+    const startPosition = parseFloat(horse.style.left) || 0; // if a horse style.left is already set, take it else take 0
+    const distance = targetPosition - startPosition; // distance we want to parkour
+    const duration = 200; // Animation duration in milliseconds
+    const startTime = performance.now(); // number of milliseconds since animation started
+
+    function animate(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1); //% of animation done
+
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+
+        const currentPosition = startPosition + (distance * easeProgress);
+        horse.style.left = currentPosition + '%'; // moving the horse
+
+        if (progress < 1) {
+            requestAnimationFrame(animate); //to use instead of timeout or interval
+        } else if (callback) {
+            callback(); // make sure race is over to call win or loose
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
 
 
 startButton.addEventListener("click", function(){
@@ -97,13 +121,16 @@ startButton.addEventListener("click", function(){
         else if (level === 3){
             horse1 += 3;
         }
-        horseImg1.style.left = horse1*0.9 + "%";
 
-        if (horse1>=100){
-            clearInterval(updateHorse1);
-            horse1 = 100;
-            lose()
-        }
+        const targetPosition = Math.min(horse1 * 0.9, 90); // Cap at 90% to stay before finish line
+
+        animateHorse(horseImg1, targetPosition, function() { // callback function
+            if (horse1 >= 100){
+                clearInterval(updateHorse1);
+                horse1 = 100;
+                lose();
+            }
+        });
     }, 400);
 });
 
@@ -123,10 +150,15 @@ function updateHorse2(){
     if(running === true){
         if (answer.value == result){
             horse2+= 10;
-            horseImg2.style.left = horse2*0.9 + "%";
-            if(horse2 >= 100) {
-                win();
-            }
+            const targetPosition = Math.min(horse2*0.9, 90);
+            animateHorse(horseImg2, targetPosition, function() { // call bakc function
+                if (horse2 >= 100){
+                    clearInterval(updateHorse1);
+                    horse2 = 100;
+                    win();
+                }
+            });
+
 
         }
         number1 = Math.floor(Math.random() * 11);
