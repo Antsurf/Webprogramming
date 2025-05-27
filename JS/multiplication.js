@@ -46,31 +46,44 @@ let number1 = Math.floor(Math.random() * 11);
 let number2 = Math.floor(Math.random() * 11);
 let result = number1 * number2;
 let running = false
+let timer = 3;
 
 
 let startButton = document.getElementById("StartButton");
 let computation = document.getElementById("computation")
 let answer = document.getElementById("answer");
 let startAgainButton = document.getElementById("StartAgain");
-let textHorse1 = document.getElementById("numHorse1");
-let textHorse2 = document.getElementById("numHorse2");
+let horseImg1 = document.getElementById("horse1");
+let horseImg2 = document.getElementById("horse2");
+let textTimer = document.getElementById("textTimer");
+
 let level = 0;
 
 let updateHorse1;
 
 
 startButton.addEventListener("click", function(){
-    textHorse1.innerText = "horse 1: " + horse1;
-    textHorse2.innerText = "horse 2: " + horse2;
     computation.innerHTML = number1.toString()+ " &#215 " + number2.toString();
-    document.querySelector("body").style.backgroundColor = "white";
     document.getElementById("setUp").style.display = "none";
     startAgainButton.style.display = "none";
     if (level === 0){
         level = document.getElementById("level").value;
         level = parseInt(level);
     }
-    console.log(level);
+
+    // textTimer.style.display = "block";
+    // let interval = setInterval(function(){
+    //     timer--;
+    //     textTimer.innerText = timer;
+    //
+    //     if (timer===0){
+    //         clearInterval(interval);
+    //         textTimer.style.display = "none";
+    //
+    //     }
+    // }, 1000);
+
+
     running = true;
     document.getElementById("Q&A").style.display = "block";
     answer.focus();
@@ -84,12 +97,11 @@ startButton.addEventListener("click", function(){
         else if (level === 3){
             horse1 += 3;
         }
-        textHorse1.innerText = "horse 1: " + horse1;
+        horseImg1.style.left = horse1*0.9 + "%";
 
         if (horse1>=100){
             clearInterval(updateHorse1);
             horse1 = 100;
-            textHorse1.innerText = "horse 1: " + horse1;
             lose()
         }
     }, 400);
@@ -111,8 +123,7 @@ function updateHorse2(){
     if(running === true){
         if (answer.value == result){
             horse2+= 10;
-            textHorse2.innerText = "horse 2: " + horse2;
-
+            horseImg2.style.left = horse2*0.9 + "%";
             if(horse2 >= 100) {
                 win();
             }
@@ -128,7 +139,6 @@ function updateHorse2(){
 }
 
 function win(){
-    document.querySelector("body").style.backgroundColor = "#AAFF00";
     clearInterval(updateHorse1);
     running = false;
 
@@ -143,7 +153,6 @@ function win(){
 }
 
 function lose(){
-    document.querySelector("body").style.backgroundColor = "#EE4B2B";
     running = false;
     document.getElementById("StartAgain").style.display = "block"
     startAgainButton.value = "Again";
@@ -157,5 +166,8 @@ function again(){
     number1 = Math.floor(Math.random() * 11);
     number2 = Math.floor(Math.random() * 11);
     result = number1 * number2;
+    horseImg1.style.left = horse1 *0.9 + "%";
+    horseImg2.style.left = horse2 *0.9 + "%";
+    answer.value="";
     startButton.click()
 }

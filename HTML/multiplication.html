@@ -53,22 +53,17 @@
 
 
 <!-- Intermediate quiz -->
-<h1>Check if you know them</h1>
 
 <div id="opponent" class="horse-test">
 
 </div>
 
 <div id="horse-test">
-    <div id="horses">
-        <div id="horse1"></div>
-        <div id="horse2"></div>
-    </div>
+    <img src="../IMG/horseLogo.png" id="horseLogo">
+    <h1>Horse game</h1>
 
-    <p id="numHorse1">horse 1: 0</p>
-    <p id="numHorse2">horse 2: 0</p>
     <div id="setUp">
-        <label for="level">level : </label>
+        <label for="level">Select your level : </label>
         <select id="level">
             <option>1</option>
             <option>2</option>
@@ -77,11 +72,25 @@
         <input type="submit" value="Start" id="StartButton">
     </div>
 
+    <div id="horses">
+        <div class="track">
+            <img src="../IMG/runningHorse.png" class="runningHorse" id="horse1" >
+            <div class="finishLine"></div>
+        </div>
+        <div class="track">
+            <img src="../IMG/runningHorse.png" class="runningHorse" id="horse2" >
+            <div class="finishLine"></div>
+        </div>
+    </div>
+
+
     <div id="Q&A">
         <label id="computation">1 &#215 1</label>
         <label for="answer"></label><input type="number" id="answer">
         <input type="submit" id="submitButton">
     </div>
+
+    <p id="textTimer">3</p>
 
     <input type="submit" id="StartAgain" value="Again" onclick="again()">
 
