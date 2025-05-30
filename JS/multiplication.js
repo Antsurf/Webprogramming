@@ -145,7 +145,7 @@ startButton.addEventListener("click", function(){
             horse1 += 3;
         }
 
-        const targetPosition = Math.min(horse1 * 0.9, 90); // Cap at 90% to stay before finish line
+        const targetPosition = Math.min(horse1 * 0.9, 95); // Cap at 90% to stay before finish line
 
         animateHorse(horseImg1, targetPosition, function() { // callback function
             if (horse1 >= 100){
