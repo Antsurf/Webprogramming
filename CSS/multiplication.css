@@ -1,118 +1,3 @@
-:root{
-    --light-blue: #ecf8f8;
-    --pink-beige: #eee4e1;
-    --light-brown: #c1701f;
-    --pink-red: #e6beae;
-    --brown: #fa7907;
-}
-
-html{
-    min-height:100%;
-    margin:0;
-    padding:0;
-    background-color: red; /* in case if problem */
-}
-
-
-
-
-/* BODY FOR ALL PAGES */
-body{
-
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Bahnschrift, serif;
-    background-color: var(--light-brown);
-
-}
-
-/* LINKS */
-header a{
-    text-decoration: none;
-    color: white;
-}
-
-/* HEADER FOR ALL PAGES */
-header{
-
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between; /* Push items to far left and right */
-    align-items: flex-start; /* Align them to the top */
-    background-color: var(--light-blue);
-    border-bottom: 2px solid black;
-    font-family: Bahnschrift, serif;
-    margin-bottom: 10px;
-
-}
-
-header nav{
-    display:flex;
-    flex-wrap:wrap;
-
-}
-
-header nav a:nth-child(1){
-
-    margin:20px;
-    border: 2px solid black;
-    padding:10px;
-    border-radius: 20%;
-    background-color: black;
-}
-
-header nav a:nth-child(2){
-    margin:20px;
-    border: 2px solid black;
-    padding:10px;
-    border-radius: 10%;
-    background-color: black;
-}
-
-header nav a:nth-child(3){
-    margin:20px;
-    border: 2px solid black;
-    padding:10px;
-    border-radius: 10%;
-    background-color: black;
-}
-
-header img{
-    display:flex;
-    flex-wrap:wrap;
-    padding-top:10px;
-    padding-right:10px;
-    padding-bottom:10px;
-    width:150px;
-}
-
-header h2{
-    display:flex;
-    flex-wrap:wrap;
-    margin-top:30px;
-    padding-left:10px;
-
-}
-
-footer{
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top:2px solid black;
-    background-color: var(--light-blue);
-    text-align: center;
-    line-height:10px;
-    padding-bottom:10px;
-}
-
-footer a{
-    text-decoration:none;
-    color:black;
-}
-
-
 /*For all h1 titles*/
 h1{
     text-align:center;
@@ -148,8 +33,8 @@ h1{
 }
 
 #main-explanation{
-    margin-top:50px;
-    margin-bottom:50px;
+    width: 65%;
+    margin: 50px auto ;
 }
 
 .highlight{
@@ -194,7 +79,7 @@ iframe{
 
 
 #tables{ /* FOR TITLE */
-    background-color: var(--pink-red);
+    background-color: var(--light-blue);
     padding-top:5px;
 
 }
@@ -240,7 +125,7 @@ iframe{
 /* WHEN HIDDEN */
 .tables-content.hidden-table { /* select element with boss classes*/
     border: none;
-    background-color: var(--pink-red);
+    background-color: var(--light-blue);
 
 
 }
@@ -286,6 +171,7 @@ iframe{
     padding: 10px;
     border-radius: 5px;
     text-align: center;
+    background-color: var(--pink-red);
 }
 
 #Q\&A{

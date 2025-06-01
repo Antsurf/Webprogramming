@@ -1,0 +1,55 @@
+#title {
+    text-align: center;
+    font-size: 2em;
+}
+
+
+
+#main-explanation{
+    width: 65%;
+    margin: auto;
+}
+
+#images {
+    text-align: center;
+}
+
+
+.text_image img{
+    width : 200px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    margin-left: 20px;
+}
+
+.text_image p{
+    width: 50%;
+}
+
+.text_image{
+    display: flex;
+    margin-bottom: 70px;
+}
+
+#realRepresentation{
+    margin-top: 100px;
+}
+
+
+#youtube-video{
+    margin:0 auto 10px auto;
+    padding:0;
+    border:4px double black;
+    border-radius:5px;
+    width:fit-content;
+
+}
+#youtube-video h1{
+    padding:0;
+    margin:0;
+}
+
+h1{
+    margin-top: 80px;
+    text-align: center;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>division</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../CSS/headerFooter.css">
+    <link rel="stylesheet" href="../CSS/euclidean_division.css">
+</head>
+<body>
+<header>
+
+
+    <h2>EFREI Calculation</h2>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="multiplication.html">multiplications</a>
+        <a href="">First degree equations</a>
+    </nav>
+    <img src="../IMG/EFREILOGO.png" alt="au cas où">
+</header>
+<section id="title">
+    <h1>Euclidean division</h1>
+</section>
+
+<section id="main-explanation">
+    <h2 class="subtitle">Divisions</h2>
+    <p> Euclidean division – or division with remainder – is the process of dividing one integer (the dividend) by another (the divisor),
+        in a way that produces an integer quotient and a natural number remainder strictly smaller than the absolute value of the divisor.
+    </p>
+    <h4 class="subtitle">An example is better than a thousand words</h4>
+    <section id="images">
+        <img src="../IMG/Pie_division.png" id="pie1">
+        <img src="../IMG/Pie_division_2.png" id="pie2">
+    </section>
+    <p>Take this pie, we want to divide it into 4 persons, but we have 9 parts. So each one gets 2 parts and there is one left.
+        The quotient is 2 and the rest is 1
+    </p>
+    <h3 id="realRepresentation">The real representation</h3>
+    <p>The 'pie problem' can be represented with another form : The Euclidean algorithm</p>
+    <section class="text_image">
+        <p>First you need to place you element. The number you want to divide on the left and the number dividing on the right</p>
+        <img src="../IMG/euclidean1.png">
+    </section>
+    <section class="text_image">
+        <p>Then you have to ask yourself, how many times is there '4' in '9' ? 4 can be added twice !! So we write 2 under the 4.
+            If the dividend is not included in the number on the left, you just have to also select the digit on the right and
+        </p>
+        <img src="../IMG/euclidean2.png">
+    </section>
+    <section class="text_image">
+        <p>Now you just have to deduce 4 × 2 from 8. In yellow, you have the quotient, and in blue the rest
+        </p>
+        <img src="../IMG/euclidean3.png">
+    </section>
+    <section class="text_image">
+        <p>Finally, you can do it with bigger numbers like 373 by 3
+        </p>
+        <img src="../IMG/euclidean4.png">
+    </section>
+</section>
+
+<section id="youtube-video">
+    <h1>A little video to explain it to you !</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GcKjDZnlVdY?si=10TctaWL5gZqGNFQ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</section>
+<h1>Do it yourself</h1>
+
+
+<footer>
+    <p>© 2025 SAGNARD/RICHARD. All rights reserved</p>
+    <a href="about.html">About us</a>
+</footer>
+</body>
+</html>
