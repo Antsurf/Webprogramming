@@ -68,7 +68,7 @@ header nav a:hover{
 header img{
     display:flex;
     flex-wrap:wrap;
-    padding-top:10px;
+    padding-top:12px;
     padding-right:10px;
     padding-bottom:10px;
     width:150px;
@@ -87,6 +87,7 @@ footer{
     flex-wrap:wrap;
     flex-direction: column;
     justify-content: space-between;
+    align-items:center;
     box-shadow: 0 -3px 5px #95b2bc;
     background-color: white;
     text-align: center;
@@ -97,4 +98,11 @@ footer{
 footer a{
     text-decoration:none;
     color:black;
+}
+
+footer a:hover{
+    background-color: #9c9c9c;
+    padding:4px;
+    border-radius: 4px;
+
 }

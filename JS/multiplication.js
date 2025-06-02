@@ -43,8 +43,9 @@ for (let i = 1; i <= 12; i++) {
 function showTitle(){
     var game =document.getElementById("horse-test");
     var title = document.getElementById("game-title");
-    if (game.style.display=="block"){
+    if (game.style.display==="block"){
         title.style.display ="none";
+
     }
     else{
         title.style.display="block"
@@ -52,13 +53,17 @@ function showTitle(){
 }
 function showGame() {
 
-    var x = document.getElementById("horse-test");
+    const test = document.getElementById("horse-test");
+    /* to check in real time the display, to avoid having to click twice
+    * on the button for it to activate (x.style.display ===none will fail the first time)*/
+    const currentDisplay = window.getComputedStyle(test).display;
+    if (currentDisplay === "none") {
+        test.style.display = "block";
+        test.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
         showTitle()
     } else {
-        x.style.display = "none";
+        test.style.display = "none";
         showTitle()
     }
 }
@@ -171,7 +176,7 @@ answer.addEventListener("keypress", function(event){
 
 function updateHorse2(){
     if(running === true){
-        if (answer.value == result){
+        if (parseInt(answer.value) === result){ // to convert answer in int bc result is also int
             horse2+= 8;
             const targetPosition = Math.min(horse2*0.9, 95);
             animateHorse(horseImg2, targetPosition, function() { // call bakc function

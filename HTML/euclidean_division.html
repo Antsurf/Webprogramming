@@ -14,11 +14,11 @@
 
     <h2>EFREI Calculation</h2>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="multiplication.html">multiplications</a>
-        <a href="">First degree equations</a>
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/multiplication.html">Multiplications</a>
+        <a href="../HTML/equation.html">First degree equations</a>
     </nav>
-    <img src="../IMG/EFREILOGO.png" alt="au cas où">
+    <img src="../IMG/efrei_bw.png" alt="Logo EFREI">
 </header>
 <section id="title">
     <h1>Euclidean division</h1>
@@ -31,71 +31,80 @@
     </p>
     <h4 class="subtitle">An example is better than a thousand words</h4>
     <section id="images">
-        <img src="../IMG/Pie_division.png" id="pie1">
-        <img src="../IMG/Pie_division_2.png" id="pie2">
+        <img src="../IMG/Pie_division.png" id="pie1" alt="pie1">
+        <img src="../IMG/Pie_division_2.png" id="pie2" alt="pie2">
     </section>
     <p>Take this pie, we want to divide it into 4 persons, but we have 9 parts. So each one gets 2 parts and there is one left.
-        The quotient is 2 and the rest is 1
+        The quotient is 2 and the rest is 1.
     </p>
     <h3 id="realRepresentation">The real representation</h3>
     <p>The 'pie problem' can be represented with another form : The Euclidean algorithm</p>
     <section class="text_image">
         <p>First you need to place you element. The number you want to divide on the left and the number dividing on the right</p>
-        <img src="../IMG/euclidean1.png">
+        <img src="../IMG/euclidean1.png" alt="first step">
     </section>
     <section class="text_image">
         <p>Then you have to ask yourself, how many times is there '4' in '9' ? 4 can be added twice !! So we write 2 under the 4.
             If the dividend is not included in the number on the left, you just have to also select the digit on the right and
         </p>
-        <img src="../IMG/euclidean2.png">
+        <img src="../IMG/euclidean2.png" alt="second step">
     </section>
     <section class="text_image">
         <p>Now you just have to deduce 4 × 2 from 8. In yellow, you have the quotient, and in blue the rest
         </p>
-        <img src="../IMG/euclidean3.png">
+        <img src="../IMG/euclidean3.png" alt="third step">
     </section>
     <section class="text_image">
         <p>Finally, you can do it with bigger numbers like 373 by 3
         </p>
-        <img src="../IMG/euclidean4.png">
+        <img src="../IMG/euclidean4.png" alt="fourth step">
+    </section>
+    <section id="youtube-video">
+        <h1>A little video to explain it to you !</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GcKjDZnlVdY?si=10TctaWL5gZqGNFQ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     </section>
 </section>
 
-<section id="youtube-video">
-    <h1>A little video to explain it to you !</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GcKjDZnlVdY?si=10TctaWL5gZqGNFQ"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-</section>
-<h1>Do it yourself</h1>
+
 
 <!--EUCLIDEAN QUIZ-->
-<section id="euclidean-quiz">
-    <div class="card-container">
-        <div class="card" id="card">
-            <!-- front of the card -->
-            <div class="front">
-                <h2 id="problem">Loading...</h2>
-                <label for="quotient">
-                <input type="number" id="quotient" placeholder="Quotient">
-                </label>
-                <label for="remainder">
-                    <input type="number" id="remainder" placeholder="Remainder">
-                </label>
-                <button onclick="checkAnswer()">Submit</button>
-            </div>
-            <!--CARD when flipped-->
-            <div class="back" id="resultBack">
-                <h2 id="answer"></h2>
+<section id="euclidean-game">
+    <h2 id="game-title">Click on the logo to test yourself !</h2>
+    <img id="cardlogo" src="../IMG/cardgame_quiz.png" onclick="showGame()" alt="Quiz logo">
+    <div id="euclidean-quiz">
+        <h1>Welcome to the card game !</h1>
+        <h3>You'll have to answer 20 questions to test your knowledge. </h3>
+        <div class="card-container">
+            <div class="card" id="card">
+                <!-- front of the card -->
+                <div class="front">
+                    <!-- in case of js problem -->
+                    <h2 id="problem">Loading...</h2>
+                    <!--quizz part-->
+                    <label for="quotient">
+                    <input type="number" id="quotient" placeholder="Quotient">
+                    </label>
+                    <label for="remainder">
+                        <input type="number" id="remainder" placeholder="Remainder">
+                    </label>
+                    <button onclick="checkAnswer()">Submit</button>
+                </div>
+                <!--CARD when flipped-->
+                <div class="back" id="resultBack">
+                    <h2 id="answer"></h2>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="scoreScreen" class="hidden">
-        <h1>Your Score: <span id="finalScore"></span>/20</h1>
-        <button onclick="restartQuiz()">Restart</button>
+        <div id="scoreScreen" class="hidden">
+            <h1>Your Score is: <span id="finalScore"></span></h1>
+            <button onclick="restartQuiz()">Restart</button>
+        </div>
     </div>
 </section>
 

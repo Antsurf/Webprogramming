@@ -3,11 +3,25 @@
     font-size: 2em;
 }
 
+/*For all h1 titles*/
+h1{
+    text-align:center;
+    font-size:32px;
 
+}
 
 #main-explanation{
     width: 65%;
-    margin: auto;
+    margin: 50px auto 20px auto ;
+    padding:45px;
+    border-radius: 40px;
+    background-color: white;
+}
+
+#main-explanation p{
+    padding-left:12px;
+    line-height: 17px;
+    margin-top:0;
 }
 
 #images {
@@ -36,8 +50,15 @@
 }
 
 
+.subtitle{
+    padding-left:5px;
+    line-height: 1px;
+    margin-top:20px;
+    text-decoration: underline;
+}
+
 #youtube-video{
-    margin:0 auto 10px auto;
+    margin:40px auto 10px auto;
     padding:0;
     border:4px double black;
     border-radius:5px;
@@ -49,18 +70,67 @@
     margin:0;
 }
 
+iframe{
+    display:block;
+    margin:auto; /*margin only works for block elements only, that's why display block*/
+    width:500px;
+    padding:0;
+
+}
 h1{
     margin-top: 80px;
     text-align: center;
 }
 
 /* CARDS QUIZZ */
+#game-title{
+    display:block;
+    margin:0;
+}
+#cardlogo{
+
+        width: 17%;
+        display: block;
+        margin: 20px auto 20px auto;
+        cursor:pointer;
+        transform:rotate(30deg);
+
+}
+
+@keyframes spin { /* go from one state to another */
+    from {
+        transform: rotate(30deg);
+    }
+    to {
+        transform: rotate(390deg); /* go back to initial*/
+    }
+}
+.spin {
+    animation: spin 1s ease-out;
+}
+
+#euclidean-game{
+
+        margin : 10px auto 10px auto;
+        width:80%;
+        border: solid 1px black;
+        padding: 10px;
+        border-radius: 40px;
+        text-align: center;
+        background-color: var(--pink-red);
+
+}
+
+#euclidean-quiz{
+    display:none;
+}
 
 .card-container { /* Box containing the card*/
     perspective: 1000px; /*to have 3D flip effect*/
     display: flex;
     justify-content: center;
-    margin: 10px auto 80px auto;
+    margin: 2px auto 50px auto;
+
 }
 
 .card { /* the flipping element*/
@@ -84,6 +154,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .back {
