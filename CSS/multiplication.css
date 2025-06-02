@@ -41,7 +41,7 @@ h1{
 }
 
 .highlight{
-    background-color: #60f6ef;
+    font-weight: bold;
 
 }
 #main-explanation p{
@@ -182,10 +182,19 @@ iframe{
 
 #Q\&A{
     display: none;
+    margin:10px;
 }
 
+#levelnb{
+    display:none;
+}
+#result{
+    display:none;
+    margin:auto;
+}
 #StartAgain{
     display: none;
+    margin:auto;
 }
 
 #setUp, #Q\&A{

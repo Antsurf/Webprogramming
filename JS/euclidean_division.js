@@ -1,7 +1,7 @@
 
 // display game (like in multiplication page)
-function showTitle(){
-    var game =document.getElementById("euclidean-quiz");
+function showTitle(){ // card title, make click on the logo to test yourself disapears
+    var game =document.getElementById("euclidean-titles");
     var title = document.getElementById("game-title");
     if (game.style.display==="block"){
         title.style.display ="none";
@@ -11,39 +11,67 @@ function showTitle(){
 
     }
 }
-function showGame() {
+function showGameTitles() { // click on the logo to test yourself
 
-    var quiz = document.getElementById("euclidean-quiz");
+    const titles = document.getElementById("euclidean-titles");
     const logo = document.getElementById("cardlogo");
     logo.classList.remove("spin"); // Reset already spinning
     void logo.offsetWidth; // so when clicked, spin again
     logo.classList.add("spin");
-/* to check in real time the display, to avoid having to click twice
-* on the button for it to activate (x.style.display ===none will fail the first time)*/
-const currentDisplay = window.getComputedStyle(quiz).display;
+    /* to check in real time the display, to avoid having to click twice
+    * on the button for it to activate (x.style.display ===none will fail the first time)*/
+    const currentDisplay = window.getComputedStyle(titles).display;
 
-if (currentDisplay === "none") {
-    quiz.style.display = "block";
-    showTitle()
-    quiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (currentDisplay === "none") {
+        titles.style.display = "block";
+        showTitle()
+        titles.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-} else {
-    quiz.style.display = "none";
+    } else {
+        titles.style.display = "none";
 
-    showTitle()
+        showTitle()
+    }
 }
+function showGame(){ // display cards and make the nb of questions disappear or reappears
+    const card = document.getElementById("euclidean-quiz");
+    const title = document.getElementById("euclidean-titles") // how many questions....
+    if (title.style.display ==="block") {
+        card.style.display = "block";
+        title.style.display = "none";
+    }
+    else{
+        title.style.display="block";
+    }
 }
 
 
+//Quiz load
 
-//Quizz load
 
-// WAIT FOR THE PAGE TO BE FULLY LOADED OR ELSE IT CRASHES
-document.addEventListener("DOMContentLoaded", () => {
 let a, b, expectedQ, expectedR;
 let currentProblem = 0;
 let score = 0;
-const totalProblems = 20; //nb questions
+let totalProblems = 20; //nb questions
+
+function startQuiz(){
+    totalProblems = parseInt(document.getElementById("questionCount").value,10) || 20; // if not valid, value = 20
+    showGame();
+    generateProblem();
+}
+
+function restartQuiz() {
+
+        currentProblem = 0;
+        score = 0;
+        document.querySelector(".card-container").classList.remove("hidden");
+        document.getElementById("scoreScreen").classList.add("hidden");
+
+        document.getElementById("euclidean-quiz").style.display = "none";
+        showGame();
+
+}
+
 
 function generateProblem() {
     // if over
@@ -58,8 +86,8 @@ function generateProblem() {
     document.getElementById("quotient").value = "";
     document.getElementById("remainder").value = "";
 
-    a = Math.floor(Math.random() * 90) + 10;
-    b = Math.floor(Math.random() * 9) + 2;
+    a = Math.floor(Math.random() * 90) + 10; //[10;99]
+    b = Math.floor(Math.random() * 9) + 2; //[2;10]
 
     expectedQ = Math.floor(a / b);
     expectedR = a % b;
@@ -107,28 +135,17 @@ function checkAnswer() {
 function showScore() {
     document.querySelector(".card-container").classList.add("hidden");
     document.getElementById("scoreScreen").classList.remove("hidden");
-    document.getElementById("finalScore").textContent = `${score}/${totalProblems}`; // attention : not '' but ``
-    if (score < 10){
-        alert("You should go back to the demonstration !");
-    }
-    else if (score < 15){
-        alert("Very good but not perfect");
-    }
-    else{
-        alert("You are ready for your test !");
+    const scoreOutOf20 = Math.round((score / totalProblems) * 20);
+    document.getElementById("finalScore").textContent = `${score}/${totalProblems} <=> ${scoreOutOf20}/20`;
+
+    if (scoreOutOf20 < 10) {
+        alert("You should go back to the demonstration!");
+    } else if (scoreOutOf20 < 15) {
+        alert("Very good but not perfect.");
+    } else {
+        alert("You are ready for your test!");
     }
 }
 
-function restartQuiz() {
-    currentProblem = 0;
-    score = 0;
-    document.querySelector(".card-container").classList.remove("hidden");
-    document.getElementById("scoreScreen").classList.add("hidden");
-    generateProblem();
-}
 
-window.checkAnswer = checkAnswer;
-window.restartQuiz = restartQuiz;
 
-generateProblem();
-});

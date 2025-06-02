@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Easy Math</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../CSS/multiplication.css">
     <link rel="stylesheet" href="../CSS/headerFooter.css">
     <script src="../JS/multiplication.js" async></script>
@@ -97,6 +97,9 @@
             <input type="submit" value="Start" id="StartButton">
         </div>
 
+        <div id="levelnb">
+
+        </div>
         <div id="horses">
             <div class="track">
                 <img src="../IMG/runningHorse.png" class="runningHorse" id="horse1" alt="ennemy horse">
@@ -112,12 +115,15 @@
         <div id="Q&A">
             <label id="computation">1 &#215 1</label>
             <label for="answer"></label><input type="number" id="answer">
-            <input type="submit" id="submitButton">
+            <input type="submit" id="submitButton" value ="Submit">
         </div>
 
-        <p id="textTimer">3</p>
+        <p id="textTimer"></p>
 
-        <input type="submit" id="StartAgain" value="Again" onclick="again()">
+        <div id="result">
+
+        </div>
+        <input type="submit" id="StartAgain" value="Try Again !" onclick="again()">
 
     </div>
 </section>

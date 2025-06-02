@@ -83,17 +83,29 @@ h1{
 }
 
 /* CARDS QUIZZ */
+
+#euclidean-game{
+
+        margin : 10px auto 30px auto;
+        width:80%;
+        border: solid 1px black;
+        padding: 10px;
+        border-radius: 40px;
+        text-align: center;
+        background-color: var(--pink-red);
+
+}
 #game-title{
     display:block;
     margin:0;
 }
 #cardlogo{
 
-        width: 17%;
-        display: block;
-        margin: 20px auto 20px auto;
-        cursor:pointer;
-        transform:rotate(30deg);
+    width: 17%;
+    display: block;
+    margin: 20px auto 20px auto;
+    cursor:pointer;
+    transform:rotate(30deg);
 
 }
 
@@ -109,23 +121,23 @@ h1{
     animation: spin 1s ease-out;
 }
 
-#euclidean-game{
-
-        margin : 10px auto 30px auto;
-        width:80%;
-        border: solid 1px black;
-        padding: 10px;
-        border-radius: 40px;
-        text-align: center;
-        background-color: var(--pink-red);
+#euclidean-titles{
+    display:none;
 
 }
 
 #euclidean-quiz{
     display:none;
+    margin:40px;
+}
+#questionCount{
+    margin-top:0;
+    width:20%;
+    margin-bottom:20px;
 }
 
 .card-container { /* Box containing the card*/
+
     perspective: 1000px; /*to have 3D flip effect*/
     display: flex;
     justify-content: center;
@@ -134,6 +146,7 @@ h1{
 }
 
 .card { /* the flipping element*/
+
     width: 320px;
     height: 250px;
     position: relative;

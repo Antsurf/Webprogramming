@@ -75,10 +75,17 @@
 <!--EUCLIDEAN QUIZ-->
 <section id="euclidean-game">
     <h2 id="game-title">Click on the logo to test yourself !</h2>
-    <img id="cardlogo" src="../IMG/cardgame_quiz.png" onclick="showGame()" alt="Quiz logo">
-    <div id="euclidean-quiz">
+    <img id="cardlogo" src="../IMG/cardgame_quiz.png" onclick="showGameTitles()" alt="Quiz logo">
+    <div id="euclidean-titles">
         <h1>Welcome to the card game !</h1>
-        <h3>You'll have to answer 20 questions to test your knowledge. </h3>
+        <h3>How many questions do you want to answer to ?</h3>
+        <label for="questionCount">
+            <input type="number" id="questionCount" value="20" min="1" max="20">
+        </label>
+        <button type="submit" onclick="startQuiz()">Submit</button>
+    </div>
+    <div id="euclidean-quiz">
+
         <div class="card-container">
             <div class="card" id="card"> <!-- for js code getelement byid -->
                 <!-- front of the card -->

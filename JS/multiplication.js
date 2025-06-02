@@ -114,52 +114,58 @@ function animateHorse(horse, targetPosition, callback) {
 }
 
 
-startButton.addEventListener("click", function(){
-    computation.innerHTML = number1.toString()+ " &#215 " + number2.toString();
+startButton.addEventListener("click", function() {
+    // Setup UI
     document.getElementById("setUp").style.display = "none";
+    document.getElementById("result").style.display="none";
     startAgainButton.style.display = "none";
-    if (level === 0){
+    if (level === 0) {
         level = document.getElementById("level").value;
         level = parseInt(level);
     }
 
-    // textTimer.style.display = "block";
-    // let interval = setInterval(function(){
-    //     timer--;
-    //     textTimer.innerText = timer;
-    //
-    //     if (timer===0){
-    //         clearInterval(interval);
-    //         textTimer.style.display = "none";
-    //
-    //     }
-    // }, 1000);
+    // Show countdown
+    let levelnb = document.getElementById("levelnb");
+    levelnb.innerHTML =`<h3>Level : ${level}</h3>`;
+    levelnb.style.display ="block"
+    let countdown = 3;
+    textTimer.innerText = countdown;
+    textTimer.style.display = "block";
 
+    const countdownInterval = setInterval(() => { // thx lab3
+        countdown--;
+        textTimer.innerText = countdown;
 
-    running = true;
-    document.getElementById("Q&A").style.display = "block";
-    answer.focus();
-    updateHorse1 = setInterval(function(){
-        if (level === 1){
-            horse1 += 1;
+        if (countdown === 0) {
+            clearInterval(countdownInterval);
+            textTimer.style.display = "none";
+
+            // Now start the game
+            running = true;
+            document.getElementById("Q&A").style.display = "block";
+            computation.innerHTML = number1.toString() + " &#215 " + number2.toString();
+            answer.focus();
+
+            updateHorse1 = setInterval(function () {
+                if (level === 1) {
+                    horse1 += 1;
+                } else if (level === 2) {
+                    horse1 += 1.5;
+                } else if (level === 3) {
+                    horse1 += 3;
+                }
+
+                const targetPosition = Math.min(horse1 * 0.9, 95);
+                animateHorse(horseImg1, targetPosition, function () {
+                    if (horse1 >= 100) {
+                        clearInterval(updateHorse1);
+                        horse1 = 100;
+                        lose();
+                    }
+                });
+            }, 400);
         }
-        else if(level === 2){
-            horse1 += 1.5
-        }
-        else if (level === 3){
-            horse1 += 3;
-        }
-
-        const targetPosition = Math.min(horse1 * 0.9, 95); // Cap at 90% to stay before finish line
-
-        animateHorse(horseImg1, targetPosition, function() { // callback function
-            if (horse1 >= 100){
-                clearInterval(updateHorse1);
-                horse1 = 100;
-                lose();
-            }
-        });
-    }, 400);
+    }, 1000);
 });
 
 
@@ -201,9 +207,14 @@ function updateHorse2(){
 function win(){
     clearInterval(updateHorse1);
     running = false;
+    var result = document.getElementById("result");
 
+    result.innerHTML ="<h3>You won !</h3>";
+    result.style.color ="green";
+
+    result.style.display="block";
     if (level <3){
-        startAgainButton.value = "next level";
+        startAgainButton.value = "Next level";
         level += 1;
     }
     else{
@@ -215,6 +226,11 @@ function win(){
 function lose(){
     running = false;
     document.getElementById("StartAgain").style.display = "block"
+    var result = document.getElementById("result");
+    result.innerHTML ="<h3>You lost</h3><p>You need to be quicker !</p>";
+    result.style.color ="red";
+
+    result.style.display="block";
     startAgainButton.value = "Again";
     startAgainButton.value.onclick ="again";
     startAgainButton.style.display = "block"
