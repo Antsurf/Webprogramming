@@ -1,5 +1,5 @@
 :root{
-    --light-blue: #6b9bcd;
+    --light-blue: #ecf8f8;
     --pink-beige: #eee4e1;
     --light-brown: #c1701f;
     --pink-red: #e6beae;
@@ -10,32 +10,27 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Bahnschrift, serif;
-    background-color: var(--light-brown);
+
     display: flex;
     flex-direction: column;
 }
+a{
+    text-decoration: none;
 
-header{
-    height: 60px;
-    background: radial-gradient(circle, #0a6afb, #0f46fd, #1805d1);
-    border: 2px solid black;
-    display: flex;
-    padding-top:6px;
-    justify-content: center;
-    align-items: center;
-    /* could have use flex-shrink and z-index to ensure the header stays above video*/
 }
+/* HEADER FOR ALL PAGES */
+header{
 
-footer{
     display: flex;
     flex-wrap:wrap;
-    flex-direction: column;
-    border-top:2px solid black;
-    background: radial-gradient(circle, #0a6afb, #0f46fd, #1805d1);
-    align-items: center; /* for about us button to work better in css */
-    line-height:8px;
-    padding-bottom:10px;
+    justify-content: center; /* Push items to far left and right */
+    align-items: flex-start; /* Align them to the top */
+    background: radial-gradient(circle, #7396da, #5c75ca, #2677e8);
+    font-family: Bahnschrift, serif;
+    box-shadow: 0 5px 5px #95b2bc;
 }
+
+
 
 
 .video-wrapper {
@@ -55,14 +50,57 @@ footer{
     object-fit: cover; /* to take the whole page*/
     opacity: 0.2;
 }
+
+#buttons nav{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+#buttons nav a{
+
+    margin-top:200px;
+
+    margin-left:auto;
+    margin-right:auto;
+    padding:10px;
+    border-radius: 20px;
+    background-color: black;
+    z-index:10;
+    color:white;
+
+
+}
+
+#buttons nav a:hover{
+    background-color: #676767;
+
+}
+
+
+
+footer{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: 0 -3px 5px #95b2bc;
+    background-color: white;
+    text-align: center;
+    line-height:10px;
+    padding-bottom:10px;
+}
+
 footer a{
     text-decoration:none;
     color:black;
 }
 
 footer a:hover{
-    background-color: white;
-    padding:2px;
-    border-radius: 2px;
+    background-color: #9c9c9c;
+    padding:4px;
+    border-radius: 4px;
 
 }

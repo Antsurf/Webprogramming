@@ -12,7 +12,7 @@ h1{
 
 #main-explanation{
     width: 65%;
-    margin: 50px auto 20px auto ;
+    margin: 50px auto 40px auto ;
     padding:45px;
     border-radius: 40px;
     background-color: white;
@@ -111,7 +111,7 @@ h1{
 
 #euclidean-game{
 
-        margin : 10px auto 10px auto;
+        margin : 10px auto 30px auto;
         width:80%;
         border: solid 1px black;
         padding: 10px;
@@ -140,6 +140,7 @@ h1{
     margin:auto;
     transform-style: preserve-3d;
     transition: transform 0.8s;
+
 }
 
 .front, .back {
@@ -155,6 +156,7 @@ h1{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+
 }
 
 .back {
@@ -194,9 +196,18 @@ button {
 }
 
 #scoreScreen {
+    width: 320px;
+    height: 250px;
+    margin:2px auto 30px auto;
     text-align: center;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding:10px;
+    border-radius: 5px;
+
 }
 
 .hidden {
     display: none;
 }
+

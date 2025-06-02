@@ -108,6 +108,15 @@ function showScore() {
     document.querySelector(".card-container").classList.add("hidden");
     document.getElementById("scoreScreen").classList.remove("hidden");
     document.getElementById("finalScore").textContent = `${score}/${totalProblems}`; // attention : not '' but ``
+    if (score < 10){
+        alert("You should go back to the demonstration !");
+    }
+    else if (score < 15){
+        alert("Very good but not perfect");
+    }
+    else{
+        alert("You are ready for your test !");
+    }
 }
 
 function restartQuiz() {
