@@ -25,7 +25,7 @@ header{
     flex-wrap:wrap;
     justify-content: center; /* Push items to far left and right */
     align-items: flex-start; /* Align them to the top */
-    background: radial-gradient(circle, #7396da, #5c75ca, #2677e8);
+    background: radial-gradient(circle, #5c9ecf, #4f99c8, #1e85cf);
     font-family: Bahnschrift, serif;
     box-shadow: 0 5px 5px #95b2bc;
 }
@@ -49,35 +49,97 @@ header{
     height: 100%;
     object-fit: cover; /* to take the whole page*/
     opacity: 0.2;
+    z-index: 0;
 }
 
-#buttons nav{
-
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
+#title p{
+    font-size: 2em;
+    background-color: white;
+    padding: 2px 30px ;
+    border-radius: 3px;
 }
 
-#buttons nav a{
-
-    margin-top:200px;
-
-    margin-left:auto;
-    margin-right:auto;
-    padding:10px;
-    border-radius: 20px;
-    background-color: black;
-    z-index:10;
-
-
-    color:white;
-
-
+#title{
+    position: absolute;
+    left: 50%;
+    top: -55px;
+    padding: 0;
+    height: 50px;
+}
+#toCenter{
+    position: relative;
+    left:-50%;
+    height: 100%;
+    padding: 1px;
 }
 
-#buttons nav a:hover{
-    background-color: #676767;
 
+.link-container{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #1e85cf;
+    margin: 10px;
+    border-radius: 40px;
+    align-content: center;
+    top:40%;
+}
+
+.link-container:hover{
+    background-color: #10476e;
+}
+.doodles{
+    position: absolute;
+    width: 50px;
+    z-index: 4;
+}
+#counter{
+    right: 20%;
+    top: 20%;
+    width:50px;
+    rotate: 20deg;
+}
+
+#pencil{
+    bottom: 10%;
+    width: 30px;
+    left: 20%;
+    rotate: -30deg;
+}
+#ruler{
+    top : 25%;
+    left: 30%;
+    rotate: -80deg;
+}
+
+#sphere{
+    bottom: 30%;
+    right: 40%;
+    rotate: 10deg;
+}
+#book{
+    bottom: 20%;
+    right: 5%;
+    width: 70px;
+}
+
+
+#multiplication-container{
+    left:10%;
+}
+
+#division-container{
+    right: 10%
+}
+
+
+.link-container p{
+    display: block;
+    margin: auto;
+    width: fit-content;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: underline;
 }
 
 
@@ -106,3 +168,9 @@ footer a:hover{
     border-radius: 4px;
 
 }
+
+/*@media only screen and (max-width: 800px) {*/
+/*    .link-container{*/
+/*        left: 40%*/
+/*    }*/
+/*}*/

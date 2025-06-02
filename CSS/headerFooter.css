@@ -43,7 +43,7 @@ header{
     flex-wrap:wrap;
     justify-content: space-between; /* Push items to far left and right */
     align-items: flex-start; /* Align them to the top */
-    background: radial-gradient(circle, #7396da, #5c75ca, #2677e8);
+    background: radial-gradient(circle, #5c9ecf, #4f99c8, #1e85cf);
     font-family: Bahnschrift, serif;
     margin-bottom: 10px;
     box-shadow: 0 5px 5px #95b2bc;

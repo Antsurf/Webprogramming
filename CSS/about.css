@@ -60,6 +60,10 @@ h1{
     margin: auto;
 }
 
+header{
+    box-shadow: none;
+}
+
 /* apply styles only when the viewport width is less than or equal to 800px or 600px, respectively.*/
 @media only screen and (max-width: 800px) {
     .studentContainer{

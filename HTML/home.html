@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/home.css">
     <!--don't use header footer.css because not the same-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
@@ -12,24 +13,33 @@
 
 <header>
 
-    <h1>Welcome to EFREI CALCULATION</h1>
+    <h1>EFREI CALCULATION</h1>
 
 </header>
 
-
+<img class="doodles" src="../IMG/book.png" id="book"/>
+<img class="doodles" src="../IMG/pencil.png" id="pencil"/>
+<img class="doodles" src="../IMG/ruler.png" id="ruler"/>
+<img class="doodles" src="../IMG/sphere.png" id="sphere"/>
+<img class="doodles" src="../IMG/counter.png" id="counter"/>
 <div class="video-wrapper">
     <video id="home-background" autoplay muted loop>
         <source src="../IMG/efrei_background_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-
-
+    <div id="title">
+        <div id="toCenter">
+            <p>Learn maths easily</p>
+        </div>
+    </div>
     <div id="buttons">
         <nav>
-        <a href="../HTML/home.html">Home</a>
-        <a href="../HTML/multiplication.html">Multiplications</a>
-            <a href="../HTML/euclidean_division.html">Euclidean divisions</a>
-            <a href="../HTML/equation.html">First degree equations</a>
+            <a href="../HTML/multiplication.html"><div class="link-container" id="multiplication-container">
+                <p>Multiplications</p>
+            </div></a>
+            <a href="../HTML/euclidean_division.html"><div class="link-container" id="division-container">
+                <p>Euclidean divisions</p>
+            </div></a>
         </nav>
     </div>
 
