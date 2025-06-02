@@ -23,7 +23,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: Bahnschrift, serif;
-    background-color: var(--light-blue);
+    background-color: #c7e4fa;
 
 }
 
@@ -40,10 +40,10 @@ header{
     flex-wrap:wrap;
     justify-content: space-between; /* Push items to far left and right */
     align-items: flex-start; /* Align them to the top */
-    background-color: var(--light-blue);
+    background: radial-gradient(circle, #7396da, #5c75ca, #2677e8);
     font-family: Bahnschrift, serif;
     margin-bottom: 10px;
-    box-shadow: 0 5px 5px #c6c6c6;
+    box-shadow: 0 5px 5px #95b2bc;
 }
 
 header nav{
@@ -86,7 +86,7 @@ footer{
     flex-wrap:wrap;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 -5px 5px #c6c6c6;;
+    box-shadow: 0 -3px 5px #95b2bc;
     background-color: white;
     text-align: center;
     line-height:10px;

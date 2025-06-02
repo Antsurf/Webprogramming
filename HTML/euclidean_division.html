@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../CSS/headerFooter.css">
     <link rel="stylesheet" href="../CSS/euclidean_division.css">
+    <script src="../JS/euclidean_division.js"></script>
 </head>
 <body>
 <header>
@@ -69,6 +70,38 @@
 
 </section>
 <h1>Do it yourself</h1>
+
+<!--EUCLIDEAN QUIZ-->
+<section id="euclidean-quiz">
+    <div class="card-container">
+        <div class="card" id="card">
+            <!-- front of the card -->
+            <div class="front">
+                <h2 id="problem">Loading...</h2>
+                <label for="quotient">
+                <input type="number" id="quotient" placeholder="Quotient">
+                </label>
+                <label for="remainder">
+                    <input type="number" id="remainder" placeholder="Remainder">
+                </label>
+                <button onclick="checkAnswer()">Submit</button>
+            </div>
+            <!--CARD when flipped-->
+            <div class="back" id="resultBack">
+                <h2 id="answer"></h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="scoreScreen" class="hidden">
+        <h1>Your Score: <span id="finalScore"></span>/20</h1>
+        <button onclick="restartQuiz()">Restart</button>
+    </div>
+</section>
+
+<!-- Add script just before </body>
+<script src="../JS/euclidean_division_quiz.js" defer></script>-->
+
 
 
 <footer>

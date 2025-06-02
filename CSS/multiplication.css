@@ -23,18 +23,21 @@ h1{
     top: 0; left: 0; right: 0; bottom: 0;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPmItc1mINwuFycYe93aI6Akb95_ONQFkN0Q&s");
     background-size: cover;
-    border: 1px solid black;
-    border-radius: 4px;
+    border: 2px solid black;
+    border-radius: 6px;
     width:600px;
     margin:auto;
     background-repeat: no-repeat;
-    opacity: 0.35;
+    opacity: 0.60;
     z-index: -1;
 }
 
 #main-explanation{
     width: 65%;
-    margin: 50px auto ;
+    margin: 50px auto 20px auto ;
+    padding:45px;
+    border-radius: 5%;
+    background-color: white;
 }
 
 .highlight{
@@ -55,7 +58,7 @@ h1{
 }
 
 #youtube-video{
-    margin:0 auto 10px auto;
+    margin:40px auto 10px auto;
     padding:0;
     border:4px double black;
     border-radius:5px;
@@ -81,6 +84,9 @@ iframe{
 #tables{ /* FOR TITLE */
     background-color: var(--light-blue);
     padding-top:5px;
+    width:80%;
+    margin:30px auto 40px auto;
+    border-radius:20px; /* px bc smaller item*/
 
 }
 #tables-container { /* ALL MULTIPLICATION TABLES */
@@ -166,10 +172,10 @@ iframe{
     border:1px solid black;
 }
 #horse-game {
-    margin : 10px;
+    margin : 10px 10px 30px 10px;
     border: solid 1px black;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 40px;
     text-align: center;
     background-color: var(--pink-red);
 }
