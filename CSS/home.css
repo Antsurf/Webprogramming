@@ -169,8 +169,24 @@ footer a:hover{
 
 }
 
-/*@media only screen and (max-width: 800px) {*/
-/*    .link-container{*/
-/*        left: 40%*/
-/*    }*/
-/*}*/
+@media only screen and (max-width: 800px) {
+    .link-container{
+        left: 40%
+    }
+
+    #multiplication-container{
+        top: 10%
+    }
+
+    #division-container{
+        top: 50%
+    }
+    #ruler{
+        left: 90%;
+    }
+    #sphere{
+        bottom: 30%;
+        right: 90%;
+        rotate: 10deg;
+    }
+}
